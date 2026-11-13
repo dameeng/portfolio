@@ -223,10 +223,10 @@ footer{padding:50px 0;color:var(--dim);font-size:14px;border-top:1px solid #ffff
     <h2>어디서, 무엇을 했나</h2>
     <p class="lead">숙련도 숫자 대신, 각 기술로 실제로 해낸 일을 적었습니다.</p>
     <div class="grid g4">
-      <div class="card skill"><div class="label">AI &amp; Data</div><div><span class="tag">Python</span><span class="tag">YOLO</span><span class="tag">PaddleOCR</span><span class="tag">OpenCV</span><span class="tag">scikit-learn</span></div><p>번호판 인식 모델을 직접 학습시키고, 처음 보는 데이터로 다시 시험해 실전 정확도를 47.1%에서 94.4%로 올렸습니다.</p><button class="go">→ 이 기술로 만든 프로젝트</button></div>
-      <div class="card skill"><div class="label">Backend</div><div><span class="tag">Java 17</span><span class="tag">Spring Boot</span><span class="tag">FastAPI</span><span class="tag">MyBatis</span></div><p>학습한 모델을 FastAPI 서버로 감싸, 예측 결과를 Spring Boot 서비스로 전달했습니다.</p><button class="go">→ 이 기술로 만든 프로젝트</button></div>
-      <div class="card skill"><div class="label">Frontend</div><div><span class="tag">Vue.js</span><span class="tag">Vite</span><span class="tag">JavaScript</span><span class="tag">Chart.js</span><span class="tag">PWA</span></div><p>관리자 대시보드와 운전자 앱 화면, 쇼핑몰 메인 · 공지/문의 화면을 만들었습니다.</p><button class="go">→ 이 기술로 만든 프로젝트</button></div>
-      <div class="card skill"><div class="label">DB · 배포 · 협업</div><div><span class="tag">PostgreSQL</span><span class="tag">Docker</span><span class="tag">Render</span><span class="tag">Git</span><span class="tag">GitHub</span><span class="tag">SourceTree</span></div><p>Docker로 Render에 배포해 어디서든 시연되게 했고, 통합 저장소 커밋 253건을 관리 · 병합했습니다.</p><button class="go">→ 이 기술로 만든 프로젝트</button></div>
+      <div class="card skill"><div class="label">AI &amp; Data</div><div><span class="tag">Python</span><span class="tag">YOLO</span><span class="tag">PaddleOCR</span><span class="tag">OpenCV</span><span class="tag">scikit-learn</span></div><p>번호판 인식 모델을 직접 학습시키고, 처음 보는 데이터로 다시 시험해 실전 정확도를 47.1%에서 94.4%로 올렸습니다.</p></div>
+      <div class="card skill"><div class="label">Backend</div><div><span class="tag">Java 17</span><span class="tag">Spring Boot</span><span class="tag">FastAPI</span><span class="tag">MyBatis</span></div><p>학습한 모델을 FastAPI 서버로 감싸, 예측 결과를 Spring Boot 서비스로 전달했습니다.</p></div>
+      <div class="card skill"><div class="label">Frontend</div><div><span class="tag">Vue.js</span><span class="tag">Vite</span><span class="tag">JavaScript</span><span class="tag">Chart.js</span><span class="tag">PWA</span></div><p>관리자 대시보드와 운전자 앱 화면, 쇼핑몰 메인 · 공지/문의 화면을 만들었습니다.</p></div>
+      <div class="card skill"><div class="label">DB · 배포 · 협업</div><div><span class="tag">PostgreSQL</span><span class="tag">Docker</span><span class="tag">Render</span><span class="tag">Git</span><span class="tag">GitHub</span><span class="tag">SourceTree</span></div><p>Docker로 Render에 배포해 어디서든 시연되게 했고, 통합 저장소 커밋 253건을 관리 · 병합했습니다.</p></div>
     </div>
     <p class="cap" style="margin-top:16px">수료 과정 핵심 직무역량 · 웹 개발 및 DB 설계 · AI 기반 예측 및 분석 · 프로젝트 관리 및 협업 도구 활용 (에스트래픽 스마트 모빌리티 DX Academy)</p>
     <div class="pn"><a href="#/intro">← 소개</a><a class="nx" href="#/projects">프로젝트 →</a></div>
@@ -460,11 +460,6 @@ window.addEventListener('hashchange', show);
 // ---- 상세 페이지 안에서 ①~⑤ 부분으로 내려가기 ----
 document.querySelectorAll('[data-jump]').forEach(function(el){
   el.addEventListener('click', function(e){ e.preventDefault(); document.getElementById(el.dataset.jump).scrollIntoView({behavior:'smooth'}); });
-});
-
-// ---- 기술 카드 → 프로젝트 목록 ----
-document.querySelectorAll('.skill .go').forEach(function(b){
-  b.addEventListener('click', function(){ listScroll = 0; location.hash = '#/projects'; });
 });
 
 // ---- 사진 누르면 크게 보기 ----
